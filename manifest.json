@@ -1,0 +1,18 @@
+{
+    "name": "SecurePZ",
+    "version": "0.9.0",
+    "description": "Secure Password Generator Made Easy",
+    "manifest_version": 3,
+    "author": "Behrouz Sohrabi",
+    "permissions": ["storage"],
+    "offline_enabled": true,
+    "action": {
+      "default_icon": {
+        "16": "assets/ext-icon.png",
+        "24": "assets/ext-icon.png",
+        "32": "assets/ext-icon.png"
+      },
+      "default_title": "Generate A Secure Password",
+      "default_popup": "generate.html"
+    }
+}

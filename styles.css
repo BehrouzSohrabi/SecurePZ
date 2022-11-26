@@ -1,0 +1,40 @@
+* { 
+	box-sizing: border-box;
+}
+html, body {
+	min-height: 100%;
+	background: #fff;
+	color: #000;
+}
+body {
+    min-width: 400px;
+    padding: 10px 20px;
+	font-size: 1rem;
+	text-rendering: optimizeLegibility;
+}
+body, ul, ol, dl {
+	margin: 0;
+}
+footer, header, nav, section{
+	display: block; 
+}
+h1 {
+	font-size: 1.4rem;
+}
+h2 {
+	font-size: 1.2rem;
+}
+h1, h2{
+    margin: 5px 0
+}
+.right { 
+	float: right;
+	margin-left: 2rem;
+	clear: right;
+}
+.left { 
+	float: left;
+	margin-right: 2rem;
+	clear: left;
+}
+
