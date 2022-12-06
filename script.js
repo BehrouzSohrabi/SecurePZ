@@ -59,23 +59,23 @@ function populateSettings () {
 function generate() {
 	// filter allowed characters
 	let characters = [
-		settings.lowercase ? 'abcdefghjkmnpqrstuvwxyz' : '',
-		settings.uppercase ? 'ABCDEFGHJKLMNPQRSTUVWXYZ' : '',
-		settings.numbers ? '23456789' : '',
-		settings.symbols ? '!?@#$%^&*+=' : '',
-		settings.ambiguous ? 'iIl1oO0()[].`~;:_-' : '',
-	].join('');
+		settings.lowercase ? 'abcdefghjkmnpqrstuvwxyz' + (settings.ambiguous ? 'ilo' : '') : '',
+		settings.uppercase ? 'ABCDEFGHJKLMNPQRSTUVWXYZ' + (settings.ambiguous ? 'IO' : '') : '',
+		settings.numbers ? '23456789' + (settings.ambiguous ? '10' : '') : '',
+		settings.symbols ? '!?@#$%^&*+=' + (settings.ambiguous ? '()[].`~;:_-' : '') : ''
+	];
     // check
     if (characters.length < 1){
-        characters = 'HAha'
+        characters = ['HAha']
     }
 	// generate
 	password = Array(settings.length)
-		.fill(characters)
-		.map(function (x) {
-			return x[Math.floor(Math.random() * x.length)];
-		})
-		.join('');
+		.fill('')
+		.map(function (e, i) {
+		let c = i < characters.length ? characters[i] : characters.join('')
+			return c[Math.floor(Math.random() * c.length)];
+		}).sort(() => Math.random()-.5).join('');
+	
 	passwordInput.value = password;
 	// copy to clipboard
 	setTimeout(() => {
