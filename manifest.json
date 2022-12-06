@@ -1,11 +1,14 @@
 {
   "name": "SecurePZ - One Click Password Generator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Easily create complex and secure passwords and copy it to the clipboard with one click.",
   "manifest_version": 3,
   "author": "Behrouz Sohrabi",
   "permissions": ["storage"],
   "offline_enabled": true,
+  "icons": {
+    "128": "assets/ext-icon.png"
+  },
   "action": {
     "default_icon": {
       "16": "assets/ext-icon.png",
