@@ -136,8 +136,11 @@ function populateHistory() {
         });
     }else{
         document.getElementById('button-clear').classList.add('hidden')
-        list = 'Nothing has been saved yet!'
+        list = '<li>Nothing has been saved yet!</li>'
     }
+	if (!settings.save) {
+        list = '<li class="warning">&#128312; Save History option is off.</li>' + list
+	}
     historyList.innerHTML = list;
 }
 
