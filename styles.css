@@ -217,6 +217,13 @@ input[type='range']{
 .checkbox.active:before{
     content: "\2705";
 }
+li.warning{
+    border-bottom: 1px solid #ddd;
+    color: #af0000;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    pointer-events: none;
+}
 /* dark theme */
 body.dark {
 	color: #eee;
@@ -256,4 +263,8 @@ body.dark #customize::before{
     border-bottom: 10px solid #1f1f1f;
     border-right: 10px solid transparent;
     border-left: 10px solid transparent;
+}
+body.dark li.warning{
+    border-bottom: 1px solid #494949;
+    color: #e9854a
 }
