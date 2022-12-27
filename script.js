@@ -132,7 +132,7 @@ function populateHistory() {
     if (history.length > 0) {
         document.getElementById('button-clear').classList.remove('hidden')
         history.forEach((item) => {
-            list = `<li>${item[0]}<span>${ago(item[1])}</span><li>` + list
+            list = `<li>${item[0]}<span>${ago(item[1])}</span></li>` + list
         });
     }else{
         document.getElementById('button-clear').classList.add('hidden')
