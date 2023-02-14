@@ -63,7 +63,7 @@ function generate() {
 		settings.uppercase ? 'ABCDEFGHJKLMNPQRSTUVWXYZ' + (settings.ambiguous ? 'IO' : '') : '',
 		settings.numbers ? '23456789' + (settings.ambiguous ? '10' : '') : '',
 		settings.symbols ? '!?@#$%^&*+=' + (settings.ambiguous ? '()[].`~;:_-' : '') : ''
-	];
+	].filter(c => c.length > 0);
     // check
     if (characters.length < 1){
         characters = ['HAha']
@@ -75,7 +75,6 @@ function generate() {
 		let c = i < characters.length ? characters[i] : characters.join('')
 			return c[Math.floor(Math.random() * c.length)];
 		}).sort(() => Math.random()-.5).join('');
-	
 	passwordInput.value = password;
 	// copy to clipboard
 	setTimeout(() => {
